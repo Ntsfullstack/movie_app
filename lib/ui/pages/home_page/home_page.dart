@@ -70,6 +70,23 @@ class MyHomePage extends GetView<HomeController> {
               ),
             ),
             const Padding(
+              padding: EdgeInsets.all(15.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    'Most popular',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            MovieBannerList(),
+            const Padding(
               padding: EdgeInsets.only(left: 15.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -93,23 +110,6 @@ class MyHomePage extends GetView<HomeController> {
                 CustomContainer(contentType: ContentType.inTheatre),
               ],
             ),
-            const Padding(
-              padding: EdgeInsets.all(15.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text(
-                    'Most popular',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            MovieBannerList(),
             const Padding(
               padding: EdgeInsets.only(left: 15.0, bottom: 20),
               child: Row(
