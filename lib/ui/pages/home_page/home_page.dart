@@ -8,7 +8,7 @@ import 'package:movie_app/ui/pages/home_page/list_banner.dart';
 import 'package:movie_app/ui/pages/home_page/list_film_release.dart';
 import 'package:get/get.dart';
 
-class MyHomePage extends GetView<HomeController> {
+class HomePage extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,7 +70,7 @@ class MyHomePage extends GetView<HomeController> {
               ),
             ),
             const Padding(
-              padding: EdgeInsets.all(15.0),
+              padding: EdgeInsets.only(left: 12.0, bottom: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [

@@ -1,27 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:movie_app/routes/app_pages.dart';
+import 'package:movie_app/routes/app_routes.dart';
 import 'package:movie_app/ui/pages/dashboard/dashboard_page.dart';
 import 'package:movie_app/ui/pages/home_page/home_page.dart';
 
 void main() {
-  runApp(
-    GetMaterialApp(
-      home: MyHomePage(),
-      getPages: [
-        GetPage(name: '/dashboard', page: () => DashboardPage()),
-        // Add other pages as needed
-      ],
-    ),
-  );
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      // Wrap with MaterialApp
-      title: 'My Flutter App',
-      home: DashboardPage(),
+    return GetMaterialApp(
+      initialRoute: AppRoutes.dashboard,
+      getPages: AppPages.list,
     );
   }
 }
